@@ -2,7 +2,7 @@
 
 ## Install package
 ```shell
-pip nistall -r requirements.txt
+pip3 inistall -r requirements.txt
 ```
 
 ## make config file
