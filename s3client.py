@@ -22,12 +22,12 @@ class S3Client:
         except Exception as e:
             logging.error(e)
 
-    def create_presigned_url(self, bucket_name, object_name, expiration=3600):
+    def create_presigned_url(self, bucket_name, object_name, expiration=600):
         """S3 객체를 공유하기 위해 사전인증 URL 생성하기
 
         :param bucket_name: string
         :param object_name: string
-        :param expiration: 사전인증 URL이 유효한 시간(초)
+        :param expiration: 사전인증 URL이 유효한 시간(초) / default: 10분
         :return: 문자열의 사전인증URL. 오류가 있으면 None 반환
         """
         try:
