@@ -10,9 +10,10 @@ if __name__ == '__main__':
     aws_secret_access_key = conf['aws_secret_access_key']
 
     s3_client = S3Client(region_name, aws_access_key_id, aws_secret_access_key)
-
-    bucket_name = 'skon-battery-defect'
-    filepath = 'models/yes.png'
+    ## edit properly
+    bucket_name = "your bucket name"
+    filepath = "your object path in bucket"
+    
     ob_url = s3_client.create_presigned_url(bucket_name, filepath, expiration=60)  # 60초동안 유효한 url
     print(ob_url)
 
